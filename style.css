@@ -4,6 +4,15 @@ body{
     font-family:'Roboto', sans-serif;
 }
 
+.pageContainer{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 1fr calc(100vh-1fr);
+    grid-template-areas: 
+    "sidebar header"
+    "sidebar content";
+}
+
 .searchContainer >  img#magnify,
 .profileContainer >  img#emailIcon{
     width: 2.2rem;
@@ -16,6 +25,7 @@ header{
     padding: 10px 0px;
     gap: 150px;
     box-shadow: 0px 0px 15px rgb(226, 226, 226);
+    grid-area: header;
 }
 
 .searchContainer{
@@ -45,4 +55,45 @@ header{
     flex: 0 0 auto;
     width: 3.5rem;
     border-radius: 3.5rem;
+}
+
+.sideBar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 75px;
+
+    grid-area: sidebar;
+    height: 100vh;
+
+    background-color: #575757;
+    color: white;
+}
+
+.sideBar h1{
+    font-weight: 900;
+}
+
+.sideBar>.nav{
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.sideBar li{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    grid-area: content;
+    height: 100vh;
+
+    padding: 20px;
+    background-image: linear-gradient(#FF8787, #FFD28D);
+    color: white;
 }
