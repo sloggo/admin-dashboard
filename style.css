@@ -2,6 +2,7 @@ body{
     margin: 0px;
     padding: 0px;
     font-family:'Roboto', sans-serif;
+    background-image: linear-gradient(#FF8787, #FFD28D);
 }
 
 .pageContainer{
@@ -20,11 +21,12 @@ body{
 }
 
 header{
+    background-color: white;
     display: flex;
     align-items: center;
     padding: 10px 0px;
     gap: 150px;
-    box-shadow: 0px 0px 15px rgb(226, 226, 226);
+    box-shadow: 0px 0px 15px rgb(155, 155, 155);
     grid-area: header;
 }
 
@@ -92,8 +94,7 @@ header{
     display: flex;
     flex-direction: column;
     grid-area: content;
-    padding: 20px;
-    background-image: linear-gradient(#FF8787, #FFD28D);
+    padding: 20px 50px;
     color: white;
 }
 
@@ -121,10 +122,81 @@ header{
     background-color: white;
     border-radius: 20px;
     color: black;
-
+    box-shadow: 0px 7px 10px rgb(155, 155, 155, 0.4);
 }
 
 .card1{
     grid-area: card1;
+    margin: 0;
+    padding: 20px 30px;
+
+    display: flex;
+    flex-direction: column;
 }
 
+.contentGridContainer>div[class^='card'] > h3{
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.card1 > img{
+    width: 80%;
+    align-self: center;
+}
+
+.card2{
+    grid-area: card2;
+    margin: 0;
+    padding: 20px 30px;
+}
+
+.performerContainer{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.personContainer{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 2px solid #b3b3b360;
+    border-radius: 2px;
+    gap: 90px;
+}
+
+.personLabel{
+    width: 100%;
+    flex: 1 1 auto;
+    height: 3.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card2 img{
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 3.5rem;
+}
+
+.card2 p{
+    justify-self: flex-start;
+    padding: 0;
+    margin: 0;
+}
+
+.card2 p#name{
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.card2 p#occupation{
+    font-weight: 300;
+    font-size: 1rem;
+}
