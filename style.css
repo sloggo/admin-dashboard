@@ -7,7 +7,7 @@ body{
 .pageContainer{
     display: grid;
     grid-template-columns: 1fr 6fr;
-    grid-template-rows: 1fr calc(100vh-1fr);
+    grid-template-rows: 1fr 13fr;
     grid-template-areas: 
     "sidebar header"
     "sidebar content";
@@ -65,7 +65,6 @@ header{
     gap: 75px;
 
     grid-area: sidebar;
-    height: 100vh;
 
     background-color: #575757;
     color: white;
@@ -90,10 +89,42 @@ header{
 }
 
 .content{
+    display: flex;
+    flex-direction: column;
     grid-area: content;
-    height: 100vh;
-
     padding: 20px;
     background-image: linear-gradient(#FF8787, #FFD28D);
     color: white;
 }
+
+.content>h2{
+    padding: 0px;
+    margin: 10px 0px;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.contentGridContainer{
+    margin-top: 50px;
+    display: grid;
+    height: 100%;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: 
+    'card1 card1 card2'
+    'card3 card4 card2';
+
+}
+
+.contentGridContainer>div[class^='card']{
+    background-color: white;
+    border-radius: 20px;
+    color: black;
+
+}
+
+.card1{
+    grid-area: card1;
+}
+
